@@ -91,8 +91,12 @@ WSGI_APPLICATION = 'rest_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rest_project',
+        'USER': 'bek',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 

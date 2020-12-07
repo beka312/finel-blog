@@ -18,6 +18,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('article.urls')),
     path('api-auth/', include('rest_framework.urls')),
-    path('account/', include('article.urls')),
+    path('account/', include('main.urls')),
     path('category/', CategoryListView.as_view()),
+    path('', include(router.urls))
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

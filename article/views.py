@@ -17,7 +17,7 @@ class PostViewSet(viewsets.ModelViewSet):
             permissions = []
         else:
             permissions = [PostPermission, IsPostAuthor]
-        return [permissions() for permission in permissions]
+        return [permission() for permission in permissions]
 
 
 class CommentViewSet(viewsets.ModelViewSet):
